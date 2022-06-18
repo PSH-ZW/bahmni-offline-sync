@@ -1,8 +1,8 @@
 package org.bahmni.module.bahmniOfflineSync.strategy;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.bahmni.module.bahmniOfflineSync.eventLog.EventLog;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
