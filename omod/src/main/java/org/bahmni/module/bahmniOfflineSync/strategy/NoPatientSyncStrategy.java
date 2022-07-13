@@ -22,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-public class SelectiveSyncStrategy extends AbstractOfflineSyncStrategy {    private static Logger logger = LogManager.getLogger(SelectiveSyncStrategy.class);
+public class NoPatientSyncStrategy extends AbstractOfflineSyncStrategy {    private static Logger logger = LogManager.getLogger(NoPatientSyncStrategy.class);
 
     private ConceptService conceptService;
 
@@ -36,7 +36,7 @@ public class SelectiveSyncStrategy extends AbstractOfflineSyncStrategy {    priv
             " idgen_log_entry entry on idgen_seq_id_gen.id = entry.source and entry.identifier = ? " +
             " join idgen_identifier_source src on src.id = entry.source and src.retired is not null";
 
-    public SelectiveSyncStrategy() {
+    public NoPatientSyncStrategy() {
         this.conceptService = Context.getConceptService();
         this.identifierSourceService = Context.getService(IdentifierSourceService.class);
         List<SessionFactory> sessionFactories = Context.getRegisteredComponents(SessionFactory.class);
